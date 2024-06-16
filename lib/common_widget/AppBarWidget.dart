@@ -1,4 +1,7 @@
+import 'package:clone_e_commerce/screens/ShoppingCartScreen.dart';
 import 'package:flutter/material.dart';
+
+import 'ShoppingCartIcon.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   const AppBarWidget({
@@ -47,14 +50,16 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         Row(
           children: <Widget>[
-            IconButton(
-              icon: const Icon(Icons.shopping_cart_outlined),
-              color: Colors.black,
-              iconSize: 30,
-              onPressed: () {
-                // Xử lý khi nhấn nút giỏ hàng
-              },
-            ),
+            ShoppingCartIcon(
+                itemCount: 2,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ShoppingCartScreen(),
+                    ),
+                  );
+                }),
             IconButton(
               icon: const Icon(
                 Icons.notifications_outlined,

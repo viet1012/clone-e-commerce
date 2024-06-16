@@ -12,15 +12,14 @@ class CategoryRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 100, // Adjust the height as needed
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: categories.length,
-        itemBuilder: (context, index) {
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: categories.map((category) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: CategoryItem(category: categories[index]),
+            child: CategoryItem(category: category),
           );
-        },
+        }).toList(),
       ),
     );
   }

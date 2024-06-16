@@ -33,7 +33,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageNewState extends State<MyHomePage> {
-  final List<Widget> viewContainer = [
+  final List<Widget> viewContainer = <Widget>[
     HomeScreen(),
   ];
 

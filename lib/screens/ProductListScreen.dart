@@ -51,7 +51,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                 itemCount: 4,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2, // Số cột trong lưới
-                  childAspectRatio: 0.8, // Tỷ lệ khung hình của mỗi item
+                  childAspectRatio: 0.75, // Tỷ lệ khung hình của mỗi item
                   crossAxisSpacing: 10, // Spacing between columns
                   mainAxisSpacing: 10, // Spacing between rows
                 ),

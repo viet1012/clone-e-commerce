@@ -13,7 +13,7 @@ class CategoryItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          width: 60,
+          width: 58,
           height: 60,
           decoration: BoxDecoration(
             color: Colors.grey,
