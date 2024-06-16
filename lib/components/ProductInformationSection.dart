@@ -68,7 +68,7 @@ class _ProductInformationSectionState extends State<ProductInformationSection> {
                     color: Colors.grey,
                     width: 1,
                   ),
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 child: isSelected
                     ? const Icon(

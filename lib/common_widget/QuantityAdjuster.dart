@@ -45,7 +45,7 @@ class _QuantityAdjusterState extends State<QuantityAdjuster> {
           child: Text(
             '$_quantity',
             textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 16),
+            style: const TextStyle(fontSize: 18),
           ),
         ),
         _buildQuantityButton(Icons.add, _incrementQuantity),

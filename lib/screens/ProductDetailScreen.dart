@@ -206,7 +206,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                       width: 140,
                       height: 40,
                       decoration: BoxDecoration(
-                        color: const Color(0xB9C4C4C4),
+                        color: const Color(0xFF67C4A7),
                         borderRadius: BorderRadius.circular(6),
                         border: Border.all(color: Colors.black),
                       ),
