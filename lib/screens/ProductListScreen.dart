@@ -56,7 +56,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                   mainAxisSpacing: 10, // Spacing between rows
                 ),
                 itemBuilder: (context, index) {
-                  return GridTilesProducts();
+                  return const GridTilesProducts();
                 }),
           ),
         ],

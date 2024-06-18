@@ -44,7 +44,9 @@
       - assets/images/categories/
       - assets/images/products/
       - assets/images/product_details/
+      - assets/images/cart/
       - assets/images/suppliers/
+      - assets/images/logo/
 
     #   - images/a_dot_ham.jpeg
 

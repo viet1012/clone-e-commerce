@@ -1,8 +1,5 @@
-import 'package:clone_e_commerce/screens/HomeScreen.dart';
+import 'package:clone_e_commerce/screens/SplashScreen.dart';
 import 'package:flutter/material.dart';
-
-import 'common_widget/AppBarWidget.dart';
-import 'common_widget/BottomNavBarWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -34,7 +31,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageNewState extends State<MyHomePage> {
   final List<Widget> viewContainer = <Widget>[
-    HomeScreen(),
+    // HomeScreen(),
+    SplashScreen(),
   ];
 
   @override
@@ -42,13 +40,13 @@ class _MyHomePageNewState extends State<MyHomePage> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        appBar: AppBarWidget(),
+        // appBar: AppBarWidget(),
         // drawer: DrawerWidget(),
         body: IndexedStack(
           index: currentIndex,
           children: viewContainer,
         ),
-        bottomNavigationBar: BottomNavBarWidget(),
+        // bottomNavigationBar: BottomNavBarWidget(),
       ),
     );
   }

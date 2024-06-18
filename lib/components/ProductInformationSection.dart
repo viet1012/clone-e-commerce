@@ -10,6 +10,7 @@ class ProductInformationSection extends StatefulWidget {
   final double productPrice;
   final int quantity;
   final ValueChanged<bool> onSelectionChanged;
+  final bool isCheckout;
 
   const ProductInformationSection({
     required this.screenWidth,
@@ -19,6 +20,7 @@ class ProductInformationSection extends StatefulWidget {
     required this.quantity,
     required this.imageUrl,
     required this.onSelectionChanged,
+    required this.isCheckout,
   });
 
   @override
@@ -57,28 +59,31 @@ class _ProductInformationSectionState extends State<ProductInformationSection> {
         padding: const EdgeInsets.only(left: 4, top: 0, right: 0, bottom: 0),
         child: Row(
           children: [
-            GestureDetector(
-              onTap: _toggleSelection,
-              child: Container(
-                height: 30,
-                width: 30,
-                decoration: BoxDecoration(
-                  color: isSelected ? const Color(0xFF67C4A7) : Colors.white,
-                  border: Border.all(
-                    color: Colors.grey,
-                    width: 1,
-                  ),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: isSelected
-                    ? const Icon(
-                        Icons.check,
-                        color: Colors.white,
-                        size: 20,
-                      )
-                    : null,
-              ),
-            ),
+            widget.isCheckout == false
+                ? GestureDetector(
+                    onTap: _toggleSelection,
+                    child: Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                        color:
+                            isSelected ? const Color(0xFF67C4A7) : Colors.white,
+                        border: Border.all(
+                          color: Colors.grey,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: isSelected
+                          ? const Icon(
+                              Icons.check,
+                              color: Colors.white,
+                              size: 20,
+                            )
+                          : null,
+                    ),
+                  )
+                : SizedBox(),
             const SizedBox(width: 4),
             Expanded(
               child: Row(
@@ -124,8 +129,18 @@ class _ProductInformationSectionState extends State<ProductInformationSection> {
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              QuantityAdjuster(
-                                  initialQuantity: widget.quantity),
+                              widget.isCheckout == false
+                                  ? QuantityAdjuster(
+                                      initialQuantity: widget.quantity)
+                                  : SizedBox(
+                                      width: 140,
+                                      child: Text(
+                                        textAlign: TextAlign.right,
+                                        "1 quantity",
+                                        style: TextStyle(
+                                            fontSize: 16, color: Colors.grey),
+                                      ),
+                                    ),
                             ],
                           ),
                         ),

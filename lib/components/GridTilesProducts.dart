@@ -1,4 +1,5 @@
 import 'package:clone_e_commerce/screens/ProductDetailScreen.dart';
+import 'package:clone_e_commerce/screens/ShoppingCartScreen.dart';
 import 'package:flutter/material.dart';
 
 class GridTilesProducts extends StatelessWidget {
@@ -73,6 +74,12 @@ class GridTilesProducts extends StatelessWidget {
                       const Size(150, 40), // Kích thước tối thiểu của nút
                 ),
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ShoppingCartScreen(),
+                    ),
+                  );
                   print("Button pressed");
                 },
                 child: const Text(

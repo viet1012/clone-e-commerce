@@ -1,3 +1,4 @@
+import 'package:clone_e_commerce/screens/ShoppingCartScreen.dart';
 import 'package:flutter/material.dart';
 
 import '../common_widget/FavoriteButton.dart';
@@ -51,7 +52,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
           children: [
             Image.asset(
               "assets/images/product_details/imgslider.png",
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
               filterQuality: FilterQuality.high,
             ),
             const SizedBox(height: 10),
@@ -180,6 +181,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
             ),
             const Expanded(
@@ -194,17 +196,23 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
                     onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ShoppingCartScreen(),
+                        ),
+                      );
                       print("Button clicked!");
                     },
                     child: Container(
                       width: 140,
-                      height: 40,
+                      height: 45,
                       decoration: BoxDecoration(
                         color: const Color(0xFF67C4A7),
                         borderRadius: BorderRadius.circular(6),
@@ -228,7 +236,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     },
                     child: Container(
                       width: 140,
-                      height: 40,
+                      height: 45,
                       decoration: BoxDecoration(
                         color: const Color(0xB9C4C4C4),
                         borderRadius: BorderRadius.circular(6),
