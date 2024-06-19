@@ -127,7 +127,7 @@ class _RegisterPageState extends State<RegisterPage>
                             ),
                           ),
                           minimumSize: const Size(
-                              150, 40), // Kích thước tối thiểu của nút
+                              170, 50), // Kích thước tối thiểu của nút
                         ),
                         onPressed: () {
                           // Handle register logic here

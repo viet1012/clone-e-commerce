@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../components/DeliveryOptions.dart';
 import '../components/ProductInformationSection.dart';
 import '../models/Product.dart';
+import 'PaymentMethodScreen.dart';
 
 class CheckoutScreen extends StatefulWidget {
   const CheckoutScreen({super.key});
@@ -264,6 +265,12 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 OutlinedButton(
                   onPressed: () {
                     // Xử lý sự kiện khi nhấn nút
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PaymentMethodScreen(),
+                      ),
+                    );
                   },
                   style: OutlinedButton.styleFrom(
                     backgroundColor: anyProductSelected

@@ -124,7 +124,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                       ),
                     ),
                     minimumSize:
-                        const Size(150, 40), // Kích thước tối thiểu của nút
+                        const Size(170, 50), // Kích thước tối thiểu của nút
                   ),
                   onPressed: () {
                     // Handle login logic here
